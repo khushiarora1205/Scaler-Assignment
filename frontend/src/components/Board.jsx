@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import List from './List';
 import '../styles/Board.css';
 
-const API_URL = 'https://scaler-assignment-7o9t.onrender.com/board';
+const API_URL = 'https://scaler-assignment-7o9t.onrender.com';
 
 const Board = () => {
   const [board, setBoard] = useState({ lists: [] });
