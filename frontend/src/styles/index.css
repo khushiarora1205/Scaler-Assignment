@@ -1,0 +1,44 @@
+/* Global Styles */
+:root {
+  --primary-color: #0079bf;
+  --primary-dark: #026aa7;
+  --text-color: #172b4d;
+  --text-light: #626f86;
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+  --border-color: #ddd;
+  --success-color: #216e4e;
+  --danger-color: #ae2a19;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f1f5f8;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Utility Classes */
+.board-loading,
+.board-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.board-error {
+  color: var(--danger-color);
+}

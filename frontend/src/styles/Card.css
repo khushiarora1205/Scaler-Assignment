@@ -1,0 +1,137 @@
+/* Card Styles */
+.card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.75rem;
+  cursor: grab;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  border-color: var(--text-light);
+}
+
+/* Card Content */
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.card-title {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  word-wrap: break-word;
+  word-break: break-word;
+  margin: 0;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.card-title:hover {
+  background-color: var(--bg-light);
+}
+
+.card-delete-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  opacity: 0;
+  flex-shrink: 0;
+}
+
+.card:hover .card-delete-btn {
+  opacity: 1;
+}
+
+.card-delete-btn:hover {
+  background-color: #ffe5e5;
+  color: var(--danger-color);
+}
+
+/* Card Edit Mode */
+.card-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-edit-input {
+  padding: 0.5rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: none;
+  min-height: 40px;
+}
+
+.card-edit-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 121, 191, 0.2);
+}
+
+.card-edit-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-save {
+  flex: 1;
+  padding: 0.4rem;
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-save:hover {
+  background-color: #145a32;
+}
+
+.btn-cancel-edit {
+  flex: 1;
+  padding: 0.4rem;
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-cancel-edit:hover {
+  background-color: #8b2415;
+}
+
+/* Dragging State */
+.card.dragging {
+  opacity: 0.5;
+}
